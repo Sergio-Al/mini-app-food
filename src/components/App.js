@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import { useDrag } from "@use-gesture/react";
 import Typist from "react-typist";
+import Particles from "react-tsparticles";
+import ParticlesConfig from "../config/particlesConfig.json";
 
 function PullRelease() {
   const [image, setImage] = useState();
@@ -40,9 +42,25 @@ function PullRelease() {
 }
 
 export default function App() {
+  const particlesInit = (main) => {
+    console.log(main);
+  };
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
   return (
-    <div className="app-principal">
-      <PullRelease />
-    </div>
+    <>
+      <div className="app-principal">
+        <PullRelease />
+        <Particles
+          className="app-particles-background"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={ParticlesConfig}
+        ></Particles>
+      </div>
+      <h1>This is my test text</h1>
+    </>
   );
 }
