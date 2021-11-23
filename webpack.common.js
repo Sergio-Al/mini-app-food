@@ -1,12 +1,17 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const htmlPlugin = new HtmlWebpackPlugin({
   template: "./src/index.html",
   filename: "./index.html",
+  title: "production",
 });
 
 module.exports = {
+  entry: {
+    app: "./src/index.js",
+  },
   module: {
     rules: [
       {
@@ -19,9 +24,8 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          {
-            loader: "style-loader",
-          },
+          MiniCssExtractPlugin.loader,
+          // we don't add style-loader because raises conflict with MiniCssExtractPlugin
           {
             loader: "css-loader",
           },
@@ -38,11 +42,16 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        type: "asset/resource"
+        type: "asset/resource",
       },
     ],
   },
-  plugins: [htmlPlugin],
+  plugins: [htmlPlugin, new MiniCssExtractPlugin()],
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    clean: true,
+  },
   resolve: {
     alias: {
       Assets: path.resolve(__dirname, "src/assets"),
