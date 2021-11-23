@@ -1,0 +1,50 @@
+.app-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-animated-div {
+  background: rgba(104, 94, 94, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  height: 40rem;
+  margin-top: 8rem;
+  padding: 2rem;
+  touch-action: none;
+  width: 40rem;
+  -webkit-backdrop-filter: blur(12px);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  .card-title {
+    height: 20%;
+  }
+  .app-image-div {
+    height: 80%;
+  }
+}
+
+.card-title {
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.app-card-image {
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+.app-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
