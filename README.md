@@ -1,7 +1,7 @@
 # mini-app-food
 A small app that shows food photos
 
-#important
+# Important url with sass
 To fix url import from sass we configured the following in `webpack.config.js`
 ```
 module: {
@@ -35,3 +35,13 @@ module: {
   },
 ```
 the most important was `type: "asset/resource"`
+
+## Run in dev mode
+```
+npm start
+```
+
+## Build for production
+```
+npm run build
+```
