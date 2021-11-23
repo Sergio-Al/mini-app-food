@@ -36,6 +36,11 @@ module: {
 ```
 the most important was `type: "asset/resource"`
 
+## Install Dependencies
+```
+npm install
+```
+
 ## Run in dev mode
 ```
 npm start
