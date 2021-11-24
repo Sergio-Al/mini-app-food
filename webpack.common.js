@@ -1,11 +1,20 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FaviconWebpacPlugin = require("favicons-webpack-plugin");
 
 const htmlPlugin = new HtmlWebpackPlugin({
   template: "./src/index.html",
   filename: "./index.html",
   title: "production",
+});
+
+const faviconPlugin = new FaviconWebpacPlugin({
+  logo: "./src/assets/images/images-icon.png",
+  favicons: {
+    appName: "random-images-app",
+    appDescription: "App with random images of food",
+  },
 });
 
 module.exports = {
@@ -46,7 +55,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [htmlPlugin, new MiniCssExtractPlugin()],
+  plugins: [htmlPlugin, faviconPlugin, new MiniCssExtractPlugin()],
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),

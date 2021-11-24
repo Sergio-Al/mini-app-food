@@ -27,7 +27,7 @@ function PullRelease() {
   return (
     <animated.div className="app-animated-div" {...bind()} style={{ x, y }}>
       <Typist cursor={{ hideWhenDone: true }} className="card-title">
-        Hi Everyone! Look this delicious recipe!!!!
+        Hi Everyone! Look this delicious food!!!!
       </Typist>
       <div className="app-image-div">
         <img
