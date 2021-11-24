@@ -36,7 +36,7 @@ module: {
 ```
 the most important was `type: "asset/resource"`
 
-### Commands
+## Commands
 
 ### Install Dependencies
 ```
