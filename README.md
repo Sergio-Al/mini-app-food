@@ -36,17 +36,24 @@ module: {
 ```
 the most important was `type: "asset/resource"`
 
-## Install Dependencies
+### Commands
+
+### Install Dependencies
 ```
 npm install
 ```
 
-## Run in dev mode
+### Run in dev mode
 ```
-npm start
+npm run dev-server
 ```
 
-## Build for production
+### Build for production
 ```
-npm run build
+npm run build:prod
+```
+
+### Run the Express Server
+```
+npm start
 ```
