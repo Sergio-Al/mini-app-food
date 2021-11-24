@@ -1,8 +1,12 @@
 # mini-app-food
+
 A small app that shows food photos
+[link to the Demo](https://food-images-random.herokuapp.com/)
 
 # Important url with sass
+
 To fix url import from sass we configured the following in `webpack.config.js`
+
 ```
 module: {
     rules: [
@@ -34,26 +38,31 @@ module: {
     ],
   },
 ```
+
 the most important was `type: "asset/resource"`
 
 ## Commands
 
 ### Install Dependencies
+
 ```
 npm install
 ```
 
 ### Run in dev mode
+
 ```
 npm run dev-server
 ```
 
 ### Build for production
+
 ```
 npm run build:prod
 ```
 
 ### Run the Express Server
+
 ```
 npm start
 ```
